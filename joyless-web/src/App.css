@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+* {
+    padding: 0;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+    color: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a.label.imdb {
+    background: #f5de50;
+    font-weight: bold;
+    border-style: solid;
+    border-color: orange;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a.label.mal {
+    border-style: solid;
+    background: #2e51a2;
+    font-weight: bold;
+    border-color: mediumslateblue;
+    color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+header.App-header {
+    text-align: center;
+    color: purple;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="search"] {
+    width: 100%;
+    font-size: 20px;
+    border: 3px solid mediumpurple;
+    padding: 5px;
+}
+
+input[type="search"]:focus {
+    outline-color: purple;
+}
+
+h1 {
+    margin: 10px 0px;
+}
+
+
+main > ul {
+    list-style: none;
+}
+
+.__notes ul {
+    list-style: square;
+    list-style-position: inside;
+    font-size: small;
+}
+
+.kthing {
+    background: #dddddd;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.kthing img {
+    width: 150px;
+    height: 215px;
+    display: block;
+    margin: 5px;
+}
+
+.kthing .__labels {
+    display: block;
+}
+
+.kthing .label {
+    margin-left: 5px;
+    border: 2px dashed grey;
+    border-radius: 5px;
+    padding: 1px 3px;
 }
