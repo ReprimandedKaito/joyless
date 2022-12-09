@@ -1,6 +1,4 @@
 //@ts-check
-'use strict'
-
 import { default as glob } from 'glob-promise';
 import {readFile} from 'fs/promises';
 import {basename} from 'path';
@@ -11,7 +9,7 @@ import {basename} from 'path';
  */
 export async function getMarkdownFiles(root) {
     const globPattern = 'joyless-*.md';
-    const filenameRegex = /^joyless-(\d\d\d\d|childhood|misc|todo)\.md$/;
+    const filenameRegex = /^joyless-(\d\d\d\d|childhood|misc)\.md$/;
     const valideFilename = RegExp.prototype.test.bind(filenameRegex);
     
     const paths = await glob(globPattern, {

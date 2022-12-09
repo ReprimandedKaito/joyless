@@ -1,15 +1,15 @@
 //@ts-check
-'use strict';
-
 import {writeFile} from 'fs/promises'
 
 import JoylessMarkdownParser from './JoylessMarkdownParser.js';
-import { readAll } from './joyless-builder.js';
+import { readAll } from './FileUtils.js';
 import getPosterOf from './posters/getPosterOf.js';
 import { prebuildLunrIndex } from './SearchUtils.js';
 
 
 (async function test() {
+    const JOYLESS_DIRECTORY = '../reprimanded-notes/content/joyless';
+
     const text = await readAll(JOYLESS_DIRECTORY);
     const things = JoylessMarkdownParser.parseThings(text);
     
