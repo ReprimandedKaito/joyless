@@ -1,0 +1,19 @@
+{
+    "name": "joyless-indexer",
+    "version": "0.0.1",
+    "type": "module",
+    "dependencies": {
+        "cheerio": "^1.0.0-rc.12",
+        "glob-promise": "*",
+        "install": "^0.13.0",
+        "lunr": "*",
+        "nanoid": "^4.0.0",
+        "npm": "^9.2.0",
+        "remark-gfm": "^3.0.1",
+        "remark-html": "^15.0.1",
+        "remark-parse": "^10.0.1",
+        "remark-stringify": "^10.0.2",
+        "unified": "^10.1.2",
+        "unist-util-visit-parents": "^5.1.1"
+    }
+}
