@@ -9,10 +9,6 @@ Search.
 
 - [x] `npx create-react-app joyless-web`
 
-- Search
-- Shots Indexer (Java)
-- Web
-
 ```js
 // Tribute search
 
