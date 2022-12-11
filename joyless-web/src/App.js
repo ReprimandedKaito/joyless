@@ -56,7 +56,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Kaito's Joyless junk</h1>
-        <div className='searchbar'>
+        <div className="searchbar">
             <input type="search" placeholder="Unicorn is:film opinion:liked opinion:loved"
                 value={query}
                 onChange={event => setUrlState({q: event.target.value})}

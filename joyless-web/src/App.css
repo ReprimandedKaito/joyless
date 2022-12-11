@@ -7,23 +7,8 @@ a {
     color: inherit;
 }
 
-a.label.imdb {
-    background: #f5de50;
-    font-weight: bold;
-    border-style: solid;
-    border-color: orange;
-}
 
-a.label.mal {
-    border-style: solid;
-    background: #2e51a2;
-    font-weight: bold;
-    border-color: mediumslateblue;
-    color: white;
-}
-
-
-header.App-header {
+.App-header {
     text-align: center;
     color: purple;
 }
@@ -56,15 +41,16 @@ main > ul {
 
 .kthing {
     background: #dddddd;
-    padding: 10px;
-    margin-bottom: 5px;
+    margin: 5px;
+    display: flex;
 }
 
-.kthing img {
+.kthing .__poster {
     width: 150px;
     height: 215px;
     display: block;
-    margin: 5px;
+    margin: 3px;
+    margin-right: 5px;
 }
 
 .kthing .__labels {
@@ -76,4 +62,27 @@ main > ul {
     border: 2px dashed grey;
     border-radius: 5px;
     padding: 1px 3px;
+    font-family: Noto Mono, monospace;
+}
+
+.label.opinion {
+    color: purple;
+    font-style: normal;
+    border-color: purple;
+    border-style: solid;
+}
+
+.label.imdb {
+    background: #f5de50;
+    font-weight: bold;
+    border-style: solid;
+    border-color: orange;
+}
+
+.label.mal {
+    border-style: solid;
+    background: #2e51a2;
+    font-weight: bold;
+    border-color: mediumslateblue;
+    color: white;
 }

@@ -1,10 +1,10 @@
 //@ts-check
 
-const getYtsPoster = require("./posters/getYtsPoster");
-const getTmbdPoster = require('./posters/getTmbdPoster');
-const getMalPoster = require('./posters/getMalPoster');
+import getYtsPoster from "./posters/getYtsPoster";
+import getTmbdPoster from './posters/getTmbdPoster';
+import getMalPoster from './posters/getMalPoster';
 
-(async function test() {
+(async function testGetPosters() {
     // The Shining
     console.log(await getYtsPoster('tt0081505'));
 

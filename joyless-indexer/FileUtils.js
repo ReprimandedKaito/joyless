@@ -9,7 +9,7 @@ import {basename} from 'path';
  */
 export async function getMarkdownFiles(root) {
     const globPattern = 'joyless-*.md';
-    const filenameRegex = /^joyless-(\d\d\d\d|childhood|misc)\.md$/;
+    const filenameRegex = /^joyless-(\d\d\d\d|childhood|misc|todo)\.md$/;
     const valideFilename = RegExp.prototype.test.bind(filenameRegex);
     
     const paths = await glob(globPattern, {

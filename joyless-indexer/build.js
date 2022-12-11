@@ -7,7 +7,7 @@ import getPosterOf from './posters/getPosterOf.js';
 import { prebuildLunrIndex } from './SearchUtils.js';
 
 
-(async function test() {
+(async function build() {
     const JOYLESS_DIRECTORY = '../reprimanded-notes/content/joyless';
 
     const text = await readAll(JOYLESS_DIRECTORY);

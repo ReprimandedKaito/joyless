@@ -11,7 +11,10 @@ export default function KLabel({k, v}) {
             const malUrl = `https://myanimelist.net/${malType}/${malId}`
             return <a className="label mal" href={malUrl} target="_blank">MAL</a>;
         
+        case 'opinion':
+                return <span className="label opinion">{k}:{v}</span>
+
         default:
-            return <i className="label" title={v}>{k}{v? [':', v] : null}</i>
+            return <span className="label">{k}{v? [':', v] : null}</span>
     }
 }

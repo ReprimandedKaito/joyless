@@ -27,6 +27,14 @@ export default class JoylessThing extends Thing {
     /** @type {Array<string>} */
     notes;
 
+    /** @type {boolean} */
+    checked;
+
     /** @type {'todo'|'doing'|'done'} */
     status;
+
+    /**
+     * @type {string?}
+     */
+    poster;
 }

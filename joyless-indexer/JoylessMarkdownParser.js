@@ -11,9 +11,11 @@ import JoylessThing from './JoylessThing.js';
 
 import {nanoid} from 'nanoid';
 
-
 class Shortkey {
 
+    /**
+     * @type {string[]}
+     */
     static usedIds = [];
 
     /**
@@ -111,6 +113,19 @@ export default class JoylessMarkdownParser {
                 
                 const thing = {};
                 thing.id = Shortkey.generateId();
+
+                /**
+                 * Was the line checked?
+                 * 
+                 * "- Whatever" => `null`
+                 * 
+                 * "- [ ] Whatever"  => `false`
+                 * 
+                 * "- [x] Whatever" => `true`
+                 * 
+                 * @type {boolean?}
+                 */
+                thing.checked = node.checked;
 
                 //thing.ast = node;
                 const para = node.children[0];

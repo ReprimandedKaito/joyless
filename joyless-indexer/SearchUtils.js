@@ -27,8 +27,9 @@ export function prebuildLunrIndex(things) {
     const idx = lunr(function () {
         this.ref('id');
         this.field('name');
-        this.field('alternativeNames');
+        this.field('aka');
         this.field('opinion');
+        this.field('status');
         this.field('is');
             
         docs.forEach(function (doc) {
@@ -41,10 +42,9 @@ export function prebuildLunrIndex(things) {
 }
 
 /**
- * Reshape the data
+ * Reshape the data.
  * 
  * @param {Array<JoylessThing>} things 
- * @returns {Array<Object>}
  */
 export function toLunrData(things) {
     return things.map(thing => {
@@ -57,13 +57,15 @@ export function toLunrData(things) {
             name: thing.name,
 
             /** @type {string?} */
-            alternativeNames: null,
+            aka: null,
 
             /** @type {string?} */
             opinion: null,
 
             /** @type {Array<string>} */
             is: [],
+
+            status: thing.checked === false ? 'todo' : 'done',
         };
         
         Object
@@ -78,7 +80,7 @@ export function toLunrData(things) {
                     
                     case 'aka':
                     case 'alt':
-                        obj.alternativeNames = val;
+                        obj.aka = val;
                         break;
                     
                     default:
