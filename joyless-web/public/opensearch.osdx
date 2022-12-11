@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
-    <ShortName>Kaito: Joyless</ShortName>
-    <Description>Search in my joyless notes</Description>
-    <Tags>note question</Tags>
-    <Url type="text/html" template="https://reprimandedkaito.github.io/joyless?q={searchTerms}"></Url>
-    <Query role="example" searchTerms="+is:anime opinion:loved opinion:liked"></Query>
-</OpenSearchDescription>
